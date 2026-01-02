@@ -43,7 +43,7 @@ _Figure 1. The tuning curve reveals a distinct "sweet spot" at a 30/70 split. Wh
 ### Metrics Definition
 To quantify performance, the following standard information retrieval metrics are used:
 
-*   **HR@k (Hit Rate):** Measures the proportion of test cases where the ground-truth item is present in the top-$k$ recommendations. _Did the correct item appear in the top-$k$ recommendations?_
+*   **HR@k (Hit Rate):** Measures the proportion of test cases where the ground-truth item is present in the top-k recommendations. _Did the correct item appear in the top-k recommendations?_
 *   **NDCG@k (Normalized Discounted Cumulative Gain):** A position-sensitive metric that assigns higher scores when the correct item appears near the top of the list. _How high on the list was the correct item?_
 *   **MRR (Mean Reciprocal Rank):** The average of the reciprocal ranks ($1/rank$) of the correct item. _On average, how far down does the user have to scroll to find the right item?_
 

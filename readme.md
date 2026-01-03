@@ -1,6 +1,6 @@
 # A Comparative Study of Hybrid, Content-Based, and Collaborative Filtering Recommendation Systems for E-Commerce.
 
-This project conducts a comparative analysis of recommendation strategies using the [RetailRocket](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset) e-commerce dataset. The study focuses on predicting user purchase behavior by leveraging both behavioral patterns using **Collaborative Filtering** and immediate contextual signals using **Content-Based Filtering**. The final model employs a **Hybrid Ensemble** approach, combining the strengths of both methods with a weighted average (70% Content-Based, 30% Collaborative) to explore the strength of a combined strategy.
+This project conducts a comparative analysis of recommendation strategies using the [RetailRocket](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset) e-commerce dataset. The study focuses on predicting user purchase behavior by leveraging both behavioral patterns using **Collaborative Filtering** and immediate contextual signals using **Content-Based Filtering**. In the final model, a Hybrid Ensemble strategy is applied, integrating both approaches with a weighted average (70% Content-Based, 30% Collaborative) to explore the strength of a combined strategy.
 
 ### Evaluation Protocol
 A **Temporal Leave-One-Out** protocol is established to simulate a real-world production environment. For each user, the most recent interaction is reserved for testing, while prior history is used for training.
@@ -15,7 +15,7 @@ for Sequential Recommendation](https://yuyanwei.github.io/papers/chaohuang2022mu
 The dataset was filtered to support the Leave-One-Out protocol, which requires a minimum of three distinct **transaction (purchase)** events per user. This threshold is necessary to construct a valid temporal split:
 
 1. **Test Set:** The user's most recent transaction.
-2. **Validation Set:** The user's second-most recent transaction (used for model tuning).
+2. **Validation Set:** The user's second-most recent transaction.
 3. **Training Set:** All remaining historical interactions (views, carts, and earlier purchases) that occurred before the validation transaction.
 
 This ensures that every user in the evaluation has at least one purchase event in the training history to learn from, while maintaining a strict temporal order to prevent data leakage.
@@ -43,7 +43,7 @@ _Figure 1. The tuning curve reveals a distinct "sweet spot" at a 30/70 split. Wh
 ### Metrics Definition
 To quantify performance, the following standard information retrieval metrics are used:
 
-*   **HR@k (Hit Rate):** Measures the proportion of test cases where the ground-truth item is present in the top-$k$ recommendations. _Did the correct item appear in the top-$k$ recommendations?_
+*   **HR@k (Hit Rate):** Measures the proportion of test cases where the ground-truth item is present in the top-k recommendations. _Did the correct item appear in the top-k recommendations?_
 *   **NDCG@k (Normalized Discounted Cumulative Gain):** A position-sensitive metric that assigns higher scores when the correct item appears near the top of the list. _How high on the list was the correct item?_
 *   **MRR (Mean Reciprocal Rank):** The average of the reciprocal ranks ($1/rank$) of the correct item. _On average, how far down does the user have to scroll to find the right item?_
 

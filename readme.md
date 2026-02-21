@@ -1,6 +1,6 @@
 # A Study of Hybrid, Content-Based, and Collaborative Filtering Recommendation Systems for E-Commerce.
 
-DATA: [RetailRocket](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset. 
+DATA: [RetailRocket](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset).
 
 The study focuses on predicting user purchase behavior by looking into behavioral patterns via **Collaborative Filtering** and contextual information using **Content-Based Filtering**. In the final model, a Hybrid Ensemble strategy is applied, integrating both strategies with a weighted average (70% Content-Based, 30% Collaborative) to explore the strength of a combined strategy.
 

@@ -2,7 +2,7 @@
 
 DATA: [RetailRocket](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset).
 
-The study focuses on predicting user purchase behavior by looking into behavioral patterns via **Collaborative Filtering** and contextual information using **Content-Based Filtering**. In the final model, a Hybrid Ensemble strategy is applied, integrating both strategies with a weighted average (70% Content-Based, 30% Collaborative) to explore the strength of a combined strategy.
+This study focuses on predicting a user's next purchase by looking analyzing their behavioral patterns via **Collaborative Filtering** and contextual information using **Content-Based Filtering**. In the final model, a Hybrid Ensemble strategy is applied, integrating both strategies with a weighted average (70% Content-Based, 30% Collaborative) to explore the strength of a combined strategy.
 
 ### Evaluation Protocol
 A **Temporal Leave-One-Out** protocol is established to simulate a real-world production environment. For each user, the most recent interaction is reserved for testing, while prior history is used for training.
